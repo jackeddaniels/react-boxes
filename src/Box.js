@@ -1,13 +1,14 @@
-function Box({backgroundColor, width, height}) {
+function Box({backgroundColor, width, height, removeBox}) {
   const boxStyle = {
     backgroundColor,
-    width,
-    height
+    width: `${width}px`,
+    height: `${height}px`
   }
 
   return (
-    <div style={boxStyle}>
-      <button>X</button>
+    <div >
+      <div style={boxStyle}/>
+        <button onClick={removeBox}>X</button>
     </div>
 
   )
